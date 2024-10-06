@@ -1,0 +1,18 @@
+<div class="products">
+  <div class="products__actionbar">
+    <button
+      mat-flat-button
+      aria-label="Create Product"
+      (click)="openCreateProductModal()"
+    >
+      <mat-icon>add</mat-icon>{{ "Create Product" | translate }}
+    </button>
+  </div>
+
+  <div class="product__list">
+    <!-- @for (item of products; track $index) {
+    <p>{{ item.name }}</p>
+    } -->
+    <app-reusable-data-table [dataList]="products"> </app-reusable-data-table>
+  </div>
+</div>

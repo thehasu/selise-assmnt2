@@ -1,0 +1,82 @@
+/* You can add global styles to this file, and also import other style files */
+
+@use "@angular/material" as mat;
+
+$theme: mat.define-theme();
+
+html {
+  @include mat.all-component-themes($theme);
+  @include mat.color-variants-backwards-compatibility($theme);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.mat-elevation-z8 {
+  margin: 20px 0;
+}
+
+.filter-input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  width: 1200px;
+  max-width: 96%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: space-between;
+
+  &__filter {
+    width: 200px;
+  }
+}
+
+.main {
+  width: 1200px;
+  max-width: 96%;
+  margin: 0 auto;
+  padding: 1rem;
+  min-height: calc(100vh - 64px);
+}
+
+// == Components
+
+.products {
+  &__actionbar {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+  }
+
+  &__create {
+    padding: 20px;
+  }
+}
+
+.mdc-dialog--open .mat-mdc-dialog-surface,
+.mdc-dialog--closing .mat-mdc-dialog-surface {
+  padding: 1rem;
+}

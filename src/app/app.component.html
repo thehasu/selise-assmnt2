@@ -1,0 +1,25 @@
+<header class="header">
+  <mat-toolbar color="primary">
+    <div class="navbar">
+      <a mat-flat-button routerLink="products">{{ "Product" | translate }} </a>
+
+      <div class="navbar__filter">
+        <mat-form-field>
+          <mat-label>Select Language</mat-label>
+          <mat-select
+            [(value)]="selected"
+            (selectionChange)="switchLanguage($event)"
+          >
+            <mat-option>None</mat-option>
+            <mat-option value="en">English</mat-option>
+            <mat-option value="fr">French</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+  </mat-toolbar>
+</header>
+
+<main class="main">
+  <router-outlet />
+</main>
